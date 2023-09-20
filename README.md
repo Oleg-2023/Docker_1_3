@@ -21,8 +21,9 @@ COPY init.sql /docker-entrypoint-initdb.d/init.sql
 
 VOLUME data:/var/lib/postgressql/data  
 
-**В корне проекта создаем файл docker-compose.yml, 
-который инструкцией build с помощью инструкций /database/dockerfile создает контейнер**
+**В корне проекта создаем файл docker-compose.yml**  ,
+
+который инструкцией *build* с помощью инструкций */database/dockerfile* создает контейнер
 
 version: "3.9"  
 services:  
@@ -32,11 +33,11 @@ services:
     ports:  
       - 5430:5432  
 
-**Командой docker compose up -d запускаем в фоновом режиме инициализацию 
-контейнера и выполнение  инструкций**
+Командой *docker compose up -d* запускаем в фоновом режиме инициализацию 
+контейнера и выполнение  инструкций
 
-/docker-entrypoint-initdb.d/init.sql автоматически выполнятся после создания контейнера
-и создает таблицу index_mass и заполняет ее начальными данными.
+*/docker-entrypoint-initdb.d/init.sql* автоматически выполнятся после создания контейнера
+и создает таблицу *index_mass* и заполняет ее начальными данными.
 
 **Запускаем из командной строки psql:**
 docker exec -it pg-1-3 psql -U postgres -W database ,  
