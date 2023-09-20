@@ -19,7 +19,8 @@ VOLUME data:/var/lib/postgressql/data
 
 
 **В корне проекта создаем файл docker-compose.yml, 
-который инструкцией build с помощью инструкций /database/dockerfile создает контейнер**  
+который инструкцией build с помощью инструкций /database/dockerfile создает контейнер**
+
 version: "3.9"  
 services:  
   db:  
