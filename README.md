@@ -1,15 +1,15 @@
 # Docker_1_3
-# Topic #1.3. Docker. Home work. 
+# Topic 1.3. Docker. Home work. 
 
 Эта работа использует 1 docker-контейнер.
 
 **Для описания контейнера используется файл database\Dockerfile:
 Используем официальный последний образ PostgreSQL
 Создаем базу данных**
-FROM postgres:latest
-ENV POSTGRES_DB=database
-ENV POSTGRES_USER=postgres
-ENV POSTGRES_PASSWORD=password
+FROM postgres:latest  
+ENV POSTGRES_DB=database  
+ENV POSTGRES_USER=postgres  
+ENV POSTGRES_PASSWORD=password  
 
 **Копируем SQL-скрипт из относительного пути в контейнер**
 COPY init.sql /docker-entrypoint-initdb.d/init.sql
