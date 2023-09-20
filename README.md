@@ -20,13 +20,13 @@ VOLUME data:/var/lib/postgressql/data
 
 **В корне проекта создаем файл docker-compose.yml, 
 который инструкцией build с помощью инструкций /database/dockerfile создает контейнер**
-version: "3.9"
-services:
-  db:
-    container_name: pg-1-3
-    build: ./database
-    ports:
-      - 5430:5432
+version: "3.9"  
+services:  
+  db:  
+    container_name: pg-1-3  
+    build: ./database  
+    ports:  
+      - 5430:5432  
 
 **Командой docker compose up -d запускаем в фоновом режиме инициализацию 
 контейнера и выполнение  инструкций**
