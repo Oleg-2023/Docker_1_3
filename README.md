@@ -5,7 +5,7 @@
 
 **Для описания контейнера используется файл database\Dockerfile:
 Используем официальный последний образ PostgreSQL
-Создаем базу данных**
+Создаем базу данных**  
 
 FROM postgres:latest  
 ENV POSTGRES_DB=database  
