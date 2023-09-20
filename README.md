@@ -19,7 +19,7 @@ COPY init.sql /docker-entrypoint-initdb.d/init.sql
 **Контейнер использует VOLUME для хранения данных
 что позволяет сохранить данные при перезапуске контейнера**  
 
-VOLUME data:/var/lib/postgressql/data
+VOLUME data:/var/lib/postgressql/data  
 
 **В корне проекта создаем файл docker-compose.yml, 
 который инструкцией build с помощью инструкций /database/dockerfile создает контейнер**
