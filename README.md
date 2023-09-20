@@ -19,7 +19,7 @@ VOLUME data:/var/lib/postgressql/data
 
 
 **В корне проекта создаем файл docker-compose.yml, 
-который инструкцией build с помощью инструкций /database/dockerfile создает контейнер**
+который инструкцией build с помощью инструкций /database/dockerfile создает контейнер**  
 version: "3.9"  
 services:  
   db:  
@@ -35,7 +35,7 @@ services:
 и создает таблицу index_mass и заполняет ее начальными данными.
 
 **Запускаем из командной строки psql:**
-docker exec -it pg-1-3 psql -U postgres -W database ,
+docker exec -it pg-1-3 psql -U postgres -W database ,  
 где pg-1-3 контейнер с базой данных
 
 **Добавляем, редактируем, сохраняем данные в базу database**
